@@ -1,6 +1,6 @@
 ---
 - name: Hello World!
-  hosts: dlaporalb1
+  hosts: dlaporalb1 dlaporalb2
  
   tasks:
  

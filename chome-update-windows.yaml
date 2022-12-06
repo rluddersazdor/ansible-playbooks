@@ -19,5 +19,6 @@
   hosts: pwdsmgmt1
          
   tasks:
-  - name: Ping to verify connectivity
-    ansible.builtin.ping:
+  - name: Test connectivity to a Windows host
+    win_ping:
+    

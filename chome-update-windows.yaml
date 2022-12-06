@@ -15,7 +15,7 @@
 - name: Ansible ping to verify connectivity
   gather_facts: true
   become: true
-  become: svcAnsible@revenue.int
+  become: svcAnsible
   hosts: pwdsmgmt1
          
   tasks:

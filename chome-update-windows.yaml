@@ -10,9 +10,9 @@
           
  
 ## Ping test to verify conn    
--name: Ping Test
+- name: Ping Test
   gather_facts: true
   hosts: pwdsmgmt1
   tasks:
-   -name: Ping to verify connectivity
+  - name: Ping to verify connectivity
     ansible.builtin.ping:

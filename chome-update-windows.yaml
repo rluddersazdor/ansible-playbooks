@@ -14,8 +14,8 @@
 ## Verify Connectivity to Hosts
 - name: Ansible ping to verify connectivity
   gather_facts: true
-  become: true
-  become_user: AZDOR/svcAnsible
+  #become: true
+  #become_user: AZDOR/svcAnsible
   hosts: pwdsmgmt1
          
   tasks:

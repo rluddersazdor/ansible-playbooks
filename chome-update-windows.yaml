@@ -11,14 +11,13 @@
 
 
 
-## Pause to let InfoSec tools load  
-- name: Pasue After Reboot
+## Verify Connectivity to Hosts
+- name: Ansible ping to verify connectivity
   gather_facts: true
+  become: true
+  become_method: runas
   hosts: pwdsmgmt1
          
   tasks:
-  - name: Pause for 1 minutes
-    pause:
-      minutes: 1
   - name: Ping to verify connectivity
     ansible.builtin.ping:

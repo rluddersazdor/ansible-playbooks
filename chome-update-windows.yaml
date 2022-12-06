@@ -8,11 +8,17 @@
 #          state: latest
 #          ignore_checksums: yes
           
- 
-## Ping test to verify conn    
-- name: Ping Test
+
+
+
+## Pause to let InfoSec tools load  
+- name: Pasue After Reboot
   gather_facts: true
   hosts: pwdsmgmt1
+         
   tasks:
+  - name: Pause for 1 minutes
+    pause:
+      minutes: 1
   - name: Ping to verify connectivity
     ansible.builtin.ping:

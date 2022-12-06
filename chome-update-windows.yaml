@@ -15,4 +15,4 @@
   hosts: pwdsmgmt1
   tasks:
    - name: Ping to verify connectivity
-    ansible.builtin.ping:
+     ansible.builtin.ping:

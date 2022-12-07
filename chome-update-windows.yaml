@@ -12,15 +12,15 @@
   - name: Test connectivity to a Windows host
     win_ping:
 
-# Run Updater
-- name: Run Chrome Updater
-  gather_facts: true
-  hosts: pwdsmgmt1 
+## Run Updater
+#- name: Run Chrome Updater
+#  gather_facts: true
+#  hosts: pwdsmgmt1 
   
-  tasks:
-  - name: Update Google Chrome
-    win_chocolatey:
-    name: googlechrome
-    state: latest
-    ignore_checksums: yes
+ # tasks:
+ # - name: Update Google Chrome
+ #   win_chocolatey:
+ #   name: googlechrome
+ #   state: latest
+ #   ignore_checksums: yes
           

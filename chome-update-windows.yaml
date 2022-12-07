@@ -5,7 +5,7 @@
 - name: Ansible ping to verify connectivity
   gather_facts: true
   hosts: pwdsmgmt1
-         pwdsems1
+         pwdsems01
   tasks:
   - name: Test connectivity to a Windows host
     win_ping:

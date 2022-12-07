@@ -3,7 +3,7 @@
 #  hosts: windows
 #  tasks:
 #    - name: Update Google Chrome
-#      win_chocolatey:
+#      chrome_update:
 #          name: googlechrome
 #          state: latest
 #          ignore_checksums: yes

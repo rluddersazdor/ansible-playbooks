@@ -4,10 +4,8 @@
  #Verify Connectivity to Hosts
 - name: Ansible ping to verify connectivity
   gather_facts: true
-  #become: true
-  #become_user: AZDOR/svcAnsible
   hosts: pwdsmgmt1
-         
+         pwdsems1
   tasks:
   - name: Test connectivity to a Windows host
     win_ping:

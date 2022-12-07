@@ -2,24 +2,24 @@
 # Update Chrome on Windows Server
 #
 # Verify Connectivity to Hosts
-- name: Ansible ping to verify connectivity
-  gather_facts: true
-  #become: true
-  #become_user: AZDOR/svcAnsible
-  hosts: pwdsmgmt1
-         
-  tasks:
-  - name: Test connectivity to a Windows host
-    win_ping:
-    
-#- name: Run Chrome Updater
+#- name: Ansible ping to verify connectivity
 #  gather_facts: true
-#  hosts: pwdsmgmt1 
-#  
+#  #become: true
+##  #become_user: AZDOR/svcAnsible
+#  hosts: pwdsmgmt1
+         
 #  tasks:
-#  - name: Update Google Chrome
-#    chrome_update:
-#    name: googlechrome
-#    state: latest
-#    ignore_checksums: yes
+#  - name: Test connectivity to a Windows host
+#    win_ping:
+    
+- name: Run Chrome Updater
+  gather_facts: true
+  hosts: pwdsmgmt1 
+  
+  tasks:
+  - name: Update Google Chrome
+    chrome_update:
+    name: googlechrome
+    state: latest
+    ignore_checksums: yes
           

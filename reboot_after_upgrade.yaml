@@ -1,0 +1,50 @@
+---
+- hosts: all
+  become: true
+  vars:
+  tasks:
+
+    - name: Ensure that yum-utils is installed before upgrading packages
+      yum:
+        name: yum-utils
+        state: present
+
+    - name: Upgrade all packages
+      yum:
+        name: '*'
+        state: latest
+        update_only: true
+
+    - name: Check if an upgrade is required for RHEL 7 and 8
+      block:
+
+        - name: Check if an upgrade is required
+          command: /usr/bin/needs-restarting -r
+          register: reboot_required
+          failed_when: reboot_required.rc not in (0,1)
+
+        - name: Reboot system if kernel was updated
+          reboot:
+          when:
+            - reboot_required.rc is defined
+
+      when:
+        - ansible_distribution == "RedHat"
+        - ansible_distribution_major_version > '6'
+
+    - name: Check if an upgrade is required for RHEL 6
+      block:
+
+        - name: Check if an upgrade is required
+          command: /usr/bin/needs-restarting
+          register: reboot_required
+          failed_when: reboot_required_rhel6.rc not in (0,1)
+
+        - name: Reboot system if kernel was updated
+          reboot:
+          when:
+            - reboot_required.rc is defined
+
+      when:
+        - ansible_distribution == "RedHat"
+        - ansible_distribution_major_version == '6'

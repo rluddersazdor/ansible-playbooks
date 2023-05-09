@@ -1,5 +1,5 @@
 ---
-# Playbook to rotate log files and clean space from the Tanium Client
+# Playbook to rotate log files and clean space from the Tanium Client on all RHEL Servers
 - name: Tanium Clean
   hosts: all
   gather_facts: false
@@ -7,6 +7,6 @@
   tasks:
   - name: Run Clean Script
     shell: /usr/local/bin/taniumclean
-    register: status
-  - debug:
-     var: status.stdout_lines
+    #register: status
+  #- debug:
+     #var: status.stdout_lines

@@ -1,0 +1,12 @@
+---
+Playbook to rotate log files and clean space from the Tanium Client
+- name: Tanium Clean
+  hosts: dldsadmin1
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Run Clean Script
+    shell: /usr/local/bin/taniumclean
+    register: status
+  - debug:
+     var: status.stdout_lines

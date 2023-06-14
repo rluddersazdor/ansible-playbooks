@@ -27,6 +27,6 @@
   tasks:
     - name: Check current status
       shell: "/usr/local/bin/patch_unmount_check"              
-      register: mountstatus
+      register: mount_status
     - debug:
-       var: mountstatus.stdout_lines 
+       var: mount_status.stdout_lines 

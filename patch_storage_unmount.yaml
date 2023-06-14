@@ -1,0 +1,32 @@
+---
+- name: Check to verify Oracle .patch_storage NFS Shares are unmount
+  gather_facts: false
+  become: true
+  become_user: root
+  hosts: plaporaoem1
+         pldboraoem1
+         dldboran1
+         dldboran2
+         tldboran1
+         tldboran2
+         qldboran1
+         qldboran2
+         pldboran1
+         pldboran2
+         pldbtrngoran1
+         dlapwls1
+         tlapwls1
+         qlapwls1
+         qlapwls2
+         qlapwls3
+         plapwls1
+         plapwls2
+         plapwls3
+         plaptrngwls1
+       
+  tasks:
+    - name: Check current status
+      shell: ""              
+      register: mountstatus
+    - debug:
+       var: mountstatus.stdout_lines 

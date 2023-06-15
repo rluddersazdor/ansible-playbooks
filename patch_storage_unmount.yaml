@@ -1,8 +1,6 @@
 ---
 - name: Check to verify Oracle .patch_storage NFS Shares are unmount
   gather_facts: false
-  ansible.builtin.command: /bin/false
-  ignore_errors: true
   become: true
   become_user: root
   hosts: plaporaoem1
@@ -25,6 +23,11 @@
          plapwls2
          plapwls3
          plaptrngwls1
+   
+- name: Do not count this as a failure
+  ansible.builtin.command: /bin/false
+  ignore_errors: true
+         
        
   tasks:
     - name: Check current status

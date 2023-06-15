@@ -24,14 +24,11 @@
          plapwls3
          plaptrngwls1
    
-- name: Do not count this as a failure
-  ansible.builtin.command: /bin/false
-  ignore_errors: true
-         
-       
+              
   tasks:
     - name: Check current status
-      shell: "/usr/local/bin/patch_unmount_check"              
+      shell: "/usr/local/bin/patch_unmount_check"
+      ignore_errors: true
       register: mount_status
     - debug:
        var: mount_status.stdout_lines 

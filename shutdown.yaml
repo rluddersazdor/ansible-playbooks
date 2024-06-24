@@ -14,21 +14,10 @@
   gather_facts: false
   become: true
   become_user: root
+  ignore_unreachable: yes
   hosts: dldsdev1
          dldsdev2
   tasks:
     - name: Issue Shutdown
-      ignore_unreachable: yes
       shell: poweroff
-      pause:
-        mintues: 1
       
-- name: Uptime
-  hosts: dldsdev1
-         dldsdev2
-  tasks:
-    - name: Uptime cmd
-      shell: uptime   
-
- 
-   

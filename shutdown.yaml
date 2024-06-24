@@ -2,12 +2,13 @@
 # Playbook to shutdown a Linux Server
 
 # Waring Pause in case of FUBAR   
-- name: WARNING this playbook will Shutdown Linux Servers. Cancel immediately if ran in error!
-  gather_facts: false
-  tasks:
-  - name: Pause for 1 minute
-    pause:
-      minutes: 1
+#- name: WARNING this playbook will Shutdown Linux Servers. Cancel immediately if ran in error!
+#  gather_facts: false
+#  host: dldsdev1
+#  tasks:
+#  - name: Pause for 1 minute
+#    pause:
+#      minutes: 1
 
 - name: Gather list of Servers and start the Shutdown
   gather_facts: false

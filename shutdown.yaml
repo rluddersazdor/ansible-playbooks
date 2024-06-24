@@ -10,7 +10,7 @@
 #    pause:
 #      minutes: 1
 
-- name: Gather list of Servers and start the Shutdown
+- name: Shutdown Servers
   gather_facts: false
   become: true
   become_user: root

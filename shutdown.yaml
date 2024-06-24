@@ -13,11 +13,11 @@
 - name: Gather list of Servers and start the Shutdown
   gather_facts: false
   become: true
-  become_user: root  
+  become_user: root
+  ignore_unreachable: yes
   hosts: dldsdev1
          dldsdev2
   tasks:
     - name: Issue Shutdown
       shell: poweroff
-      args:
-        warn: false 
+     

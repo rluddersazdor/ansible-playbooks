@@ -4,8 +4,8 @@
   become: true
   become_user: root  
   hosts: dldsproto1
-         dldsprot02
-         dldsprot03
+         dldsproto2
+         dldsproto3
   
   tasks:
     - name: shutdown

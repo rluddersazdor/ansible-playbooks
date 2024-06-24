@@ -4,7 +4,6 @@
 # Waring Pause in case of FUBAR   
 - name: WARNING this playbook will Shutdown Linux Servers. Cancel immediately if ran in error!
   gather_facts: false
-  hosts: dldsproto1
   tasks:
   - name: Pause for 1 minute
     pause:
@@ -14,10 +13,9 @@
   gather_facts: false
   become: true
   become_user: root  
-  hosts: dldsproto1
-         dldsproto2
-         dldsproto3
-  
+  hosts: dldsdev1
+         dldsdev2
+   
   tasks:
     - name: Issue Shutdown
       command: /sbin/shutdown -h now

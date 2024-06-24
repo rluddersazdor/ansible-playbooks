@@ -22,12 +22,20 @@
       shell: poweroff
     
       
- - name: Test
-   meta: clear_host_errors 
-   hosts: dldsdev1
-          dldsdev2
-   pause:
-      minutes: 1
+- name: Test
+  meta: clear_host_errors 
+  hosts: dldsdev1
+         dldsdev2
+  tasks:
+    - name: Pause for 1 minute
+      pause:
+        minutes: 1
+     
+- name: Uptime
+  hosts: dldsdev1
+         dldsdev2
+  tasks:
+    - name: Pause for 1 minute
       shell: uptime   
 
  

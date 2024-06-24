@@ -18,6 +18,6 @@
          dldsdev2
   tasks:
     - name: Issue Shutdown
-      community.general.shutdown:
-      #shell: poweroff
-      
+      shell: poweroff
+      args:
+        warn: false 

@@ -16,10 +16,7 @@
   become_user: root  
   hosts: dldsdev1
          dldsdev2
-   
   tasks:
     - name: Issue Shutdown
       shell: poweroff
-      register: status
-    - debug:
-       var: status.stdout_lines      
+      

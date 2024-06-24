@@ -14,23 +14,15 @@
   gather_facts: false
   become: true
   become_user: root
-  ignore_unreachable: yes
   hosts: dldsdev1
          dldsdev2
   tasks:
     - name: Issue Shutdown
+      ignore_unreachable: yes
       shell: poweroff
-    
-      
-- name: Test
-#- meta: clear_host_errors 
-  hosts: dldsdev1
-         dldsdev2
-  tasks:
-    - name: Pause for 1 minute
       pause:
-        minutes: 1
-     
+        mintues: 1
+      
 - name: Uptime
   hosts: dldsdev1
          dldsdev2

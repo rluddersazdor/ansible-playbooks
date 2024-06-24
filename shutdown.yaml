@@ -20,4 +20,15 @@
   tasks:
     - name: Issue Shutdown
       shell: poweroff
-     
+    
+      
+ - name: Test
+   meta: clear_host_errors 
+   hosts: dldsdev1
+          dldsdev2
+   pause:
+      minutes: 1
+      shell: uptime   
+
+ 
+   

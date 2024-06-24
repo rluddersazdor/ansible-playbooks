@@ -23,7 +23,7 @@
     
       
 - name: Test
-- meta: clear_host_errors 
+#- meta: clear_host_errors 
   hosts: dldsdev1
          dldsdev2
   tasks:
@@ -35,7 +35,7 @@
   hosts: dldsdev1
          dldsdev2
   tasks:
-    - name: Pause for 1 minute
+    - name: Uptime cmd
       shell: uptime   
 
  

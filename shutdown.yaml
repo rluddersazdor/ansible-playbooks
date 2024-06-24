@@ -1,13 +1,15 @@
 ---
-- hosts: 
-  dldsproto1
-  dldsprot02
-  dldsprot03
-  gather_facts: no
+- name: Playbook to shutdown a server(s).
+  gather_facts: false
+  become: true
+  become_user: root  
+  hosts: dldsproto1
+         dldsprot02
+         dldsprot03
+  
   tasks:
     - name: shutdown
       command: /sbin/shutdown -h now
-      sudo: yes
-
+      
     - name: wait go down
       local_action: wait_for host={{ ansible_ssh_host }} port=22 state=stopped

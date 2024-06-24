@@ -1,5 +1,8 @@
 ---
-- hosts: shutdown
+- hosts: 
+  dldsproto1
+  dldsprot02
+  dldsprot03
   gather_facts: no
   tasks:
     - name: shutdown

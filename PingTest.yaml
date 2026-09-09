@@ -1,12 +1,18 @@
 ---
 - name: Test connectivity to specific hosts
   hosts:
-    - tldboran1
-    - tldboran2
+    - dlapwl1
+    - dlaptascob1
+    - dlaptascob2
+    - dlaptasnfs1
+    - dldboran1
+    - dldboran2
     - tlaporalb1
     - tlaporalb2
     - tlapwl1
     - tlaptasnfs1
+    - tldboran1
+    - tldboran2
   gather_facts: false
   tasks:
     - name: Ping target hosts

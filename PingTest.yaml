@@ -2,7 +2,7 @@
 - name: Test connectivity to specific hosts
   hosts:
     - dlaporalb1
-    - dlaporalb2 
+    - dlaporalb2
     - dlapwl1
     - dlaptascob1
     - dlaptascob2

@@ -14,6 +14,13 @@
     - tldboran1
     - tldboran2
   gather_facts: false
+
+  pre_tasks:
+    - name: Display list of target servers
+      ansible.builtin.debug:
+        msg: "Testing connectivity for the following hosts: {{ ansible_play_hosts_all }}"
+      run_once: true
+
   tasks:
     - name: Ping target hosts
       ansible.builtin.ping:

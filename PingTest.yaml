@@ -1,0 +1,13 @@
+---
+- name: Test connectivity to specific hosts
+  hosts:
+    - tldboran1
+    - tldboran2
+    - tlaporalb1
+    - tlaporalb2
+    - tlapwl1
+    - tlaptasnfs1
+  gather_facts: false
+  tasks:
+    - name: Ping target hosts
+      ansible.builtin.ping:

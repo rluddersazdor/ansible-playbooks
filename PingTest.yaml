@@ -51,8 +51,8 @@
     - plissyslogng
     - plissyslogng1
     - plissyslogng2
-    - plissyslogngext
-    - plissyslogngint
+    - plissyslogngext.dmz.revenue.int
+    - plissyslogngint.dmz.revenue.int
     - plntnetbx1
     - plzirhcap1
     - qlaporalb1

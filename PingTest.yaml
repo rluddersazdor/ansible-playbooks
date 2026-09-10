@@ -16,7 +16,6 @@
     - dldsansible2
     - dldsdev1
     - dldsdev2
-    - dldsproto1
     - dldsproto2
     - dldsproto3
     - dlissplunk1
@@ -67,6 +66,7 @@
     - qlapwl3
     - qldboran1
     - qldboran2
+	- dldsproto1
     - tlaporalb1
     - tlaporalb2
     - tlaptasnfs1

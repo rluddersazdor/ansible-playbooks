@@ -3,16 +3,74 @@
   hosts:
     - dlaporalb1
     - dlaporalb2
-    - dlapwl1
+    - dlapsftp1
     - dlaptascob1
     - dlaptascob2
     - dlaptasnfs1
+    - dlapwl1
     - dldboran1
     - dldboran2
+    - dldsadmin1
+    - dldsadmin2
+    - dldsansible1
+    - dldsansible2
+    - dldsdev1
+    - dldsdev2
+    - dldsproto1
+    - dldsproto2
+    - dldsproto3
+    - dlissplunk1
+    - paporaoem1
+    - paptrngcob1
+    - paptrngwl1
+    - plaporaoem1
+    - plaporalb1
+    - plaporalb2
+    - plapoemn1
+    - plapsftp1
+    - plaptascob1
+    - plaptascob2
+    - plaptasnfs1
+    - plaptrngcob1
+    - plaptrngwl1
+    - plapwl1
+    - plapwl2
+    - plapwl3
+    - pldboemn1
+    - pldboran1
+    - pldboran2
+    - pldboraoem1
+    - pldbtrngoran1
+    - pldsadmin1
+    - pldsansible1
+    - pldsmgmt1
+    - pldsrhsat1
+    - plissecnfs1
+    - plisseccen1
+    - plissplnkdeploy1
+    - plissplnkfwd1
+    - plissyslogng
+    - plissyslogng1
+    - plissyslogng2
+    - plissyslogngext
+    - plissyslogngint
+    - plntnetbx1
+    - plzirhcap1
+    - qlaporalb1
+    - qlaporalb2
+    - qlapsftp1
+    - qlaptascob1
+    - qlaptascob2
+    - qlaptasnfs1
+    - qlapwl1
+    - qlapwl2
+    - qlapwl3
+    - qldboran1
+    - qldboran2
     - tlaporalb1
     - tlaporalb2
-    - tlapwl1
     - tlaptasnfs1
+    - tlapwl1
     - tldboran1
     - tldboran2
   gather_facts: false

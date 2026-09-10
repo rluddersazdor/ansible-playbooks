@@ -41,9 +41,7 @@
     - pldboraoem1
     - pldbtrngoran1
     - pldsadmin1
-    - pldsansible1
     - pldsmgmt1
-    - pldsrhsat1
     - plissecnfs1
     - plisseccen1
     - plissplnkdeploy1
@@ -54,7 +52,6 @@
     - plissyslogngext.dmz.revenue.int
     - plissyslogngint.dmz.revenue.int
     - plntnetbx1
-    - plzirhcap1
     - qlaporalb1
     - qlaporalb2
     - qlapsftp1

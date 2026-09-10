@@ -52,17 +52,17 @@
     - plissyslogngext.dmz.revenue.int
     - plissyslogngint.dmz.revenue.int
     - plntnetbx1
-    - qlaporalb1
-    - qlaporalb2
-    - qlapsftp1
-    - qlaptascob1
-    - qlaptascob2
-    - qlaptasnfs1
-    - qlapwl1
-    - qlapwl2
-    - qlapwl3
-    - qldboran1
-    - qldboran2
+    # - qlaporalb1
+    # - qlaporalb2
+    # - qlapsftp1
+    # - qlaptascob1
+    # - qlaptascob2
+    # - qlaptasnfs1
+    # - qlapwl1
+    # - qlapwl2
+    # - qlapwl3
+    # - qldboran1
+    # - qldboran2
     - dldsproto1
     - tlaporalb1
     - tlaporalb2
